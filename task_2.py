@@ -6,7 +6,7 @@ result = {}
 page = rq.get('https://ru.wikipedia.org/w/index.php?title=Категория%3AЖивотные_по_алфавиту')
 
 
-def get_next_page(next_url):
+def get_next_page(next_url: str):
   global result
   page = rq.get('https://ru.wikipedia.org/w/index.php?'+next_url)
   soup = BeautifulSoup(page.content, "html.parser")
